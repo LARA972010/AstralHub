@@ -9,7 +9,11 @@
         android:id="@+id/horoscopeFragment"
         android:name="com.example.astralhub.ui.horocope.HoroscopeFragment"
         android:label="fragment_horoscope"
-        tools:layout="@layout/fragment_horoscope" />
+        tools:layout="@layout/fragment_horoscope" >
+        <action
+            android:id="@+id/action_horoscopeFragment_to_horoscopeDetailActivity"
+            app:destination="@id/horoscopeDetailActivity" />
+    </fragment>
     <fragment
         android:id="@+id/luckFragment"
         android:name="com.example.astralhub.ui.luck.LuckFragment"
@@ -25,4 +29,14 @@
         android:name="com.example.astralhub.ui.home.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/horoscopeDetailActivity"
+        android:name="com.example.astralhub.ui.detail.HoroscopeDetailActivity"
+        android:label="activity_horoscope_detail_main"
+        tools:layout="@layout/activity_horoscope_detail_main" >
+        <argument
+            android:name="type"
+            app:argType="com.example.astralhub.domain.model.HoroscopeModel" />
+    </activity>
+
 </navigation>

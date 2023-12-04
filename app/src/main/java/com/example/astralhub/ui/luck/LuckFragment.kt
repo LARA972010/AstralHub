@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import com.example.astralhub.R
 import com.example.astralhub.databinding.FragmentHoroscopeBinding
 import com.example.astralhub.databinding.FragmentLuckBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LuckFragment : Fragment() {
+
 
     private var _binding: FragmentLuckBinding?=null
     private val binding get()=_binding!!
